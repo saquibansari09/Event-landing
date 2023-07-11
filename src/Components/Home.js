@@ -1,5 +1,6 @@
 import React from "react";
 import images from "../images/photo-1.jpg";
+// import Iframe from "google-map-react";
 
 const List = [
   {
@@ -75,7 +76,7 @@ const Home = () => {
               Popular Events
             </h1>
           </div>
-          <div className="mt-10 flex-col justify-center">
+          <div className="mt-5 mb-5 flex-col justify-center">
             <p className="text-2xl text-gray ">
               Here are some of the most popular events in New York City curated
               by professionals.
@@ -106,7 +107,7 @@ const Home = () => {
           })}
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-12 justify-center items-center mt-10">
+        <div className="grid lg:grid-cols-3 gap-12 justify-center items-center mt-10 ">
           {Data.map((item) => {
             return (
               <div>
@@ -128,17 +129,17 @@ const Home = () => {
         </div>
       </section>
       <section className="mt-10">
-        <form className="  bg-purple-400 w-[100%] h-[80vh] pt-14">
-          <h1 className="text-5xl font-bold text-center text-white pt-10">
+        <form className="bg-purple-400 w-[100%] h-[70vh] pt-5 sm:pb-10">
+          <h1 className="text-4xl sm:text-2xl  pl-10 font-bold p text-white pt-10">
             Organize an Event
           </h1>
-          <div className="md:flex justify-center">
+          <div className=" md:flex justify-center">
             <div class="relative z-0 w-full mb-6 group px-10 mt-5">
               <lable for="first" className="font-bold mr-10 text-white">
                 Your Name
               </lable>
               <input
-                className="px-8 py-3 border-none mt-5 "
+                className="px-10 py-2 rounded-lg outline-none"
                 type="text"
                 id="first"
                 name="myfirst"
@@ -151,7 +152,7 @@ const Home = () => {
                 Your Email Address
               </lable>
               <input
-                className="px-8 py-3 border-none mt-5"
+                className="px-10 py-2 border-none  rounded-lg outline-none"
                 type="text"
                 id="first"
                 name="myfirst"
@@ -160,11 +161,11 @@ const Home = () => {
             </div>
 
             <div class="relative z-0 w-full mb-6 group px-10 mt-5">
-              <lable for="first" className="font-bold mr-10 text-white">
+              <lable for="first" className="font-bold mr-10 text-white ">
                 Password
               </lable>
               <input
-                className="px-8 py-3 border-none mt-5"
+                className="px-10 py-2 border-none  rounded-lg outline-none"
                 type="text"
                 id="first"
                 name="myfirst"
@@ -177,7 +178,7 @@ const Home = () => {
                 Your Message
               </lable>
               <input
-                className="px-8 py-3 border-none mt-5"
+                className="px-10 py-2 border-none rounded-lg outline-none hover:border-2"
                 type="text"
                 id="first"
                 name="myfirst"
@@ -185,8 +186,22 @@ const Home = () => {
               />
             </div>
           </div>
+          <div className=" flex justify-center mt-10 mr-14">
+            <button className=" font-bold bg-purple-700 rounded-lg px-10 py-4 text-white hover:bg-purple-500">
+              Search Events Near Me
+            </button>
+          </div>
         </form>
       </section>
+      {/* <Iframe
+        src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3867187.666169696!2d76.76983739999999!3d18.81817715!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1689061690215!5m2!1sen!2sin"
+        width="600"
+        height="450"
+        style={{ border: "0" }}
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></Iframe> */}
     </section>
   );
 };
